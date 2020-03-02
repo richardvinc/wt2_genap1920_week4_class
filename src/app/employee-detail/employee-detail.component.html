@@ -1,7 +1,9 @@
 <h1>Employee Detail</h1>
-<p>ID: {{ employee.id }}</p>
-<p>Name: {{ employee.name }}</p>
-Name edit:
-<input type="text" name="name" id="name" [(ngModel)]="nameEdit" />
+<div *ngIf="employee">
+  <p>ID: {{ employee.id }}</p>
+  <p>Name: {{ employee.name }}</p>
+  Name edit:
+  <input type="text" name="name" id="name" [(ngModel)]="nameEdit" />
 
-<p *ngIf="employee.department">Department: {{ employee.department }}</p>
+  <p *ngIf="employee.department">Department: {{ employee.department }}</p>
+</div>
